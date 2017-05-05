@@ -1,11 +1,16 @@
 package org.test1;
 
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
+
+import com.web.utils.RetryListener;
+import com.web.utils.TestLinster;
 
 /**
  * Hello world!
  *
  */
+@Listeners({TestLinster.class,RetryListener.class})
 public class App 
 {
 	

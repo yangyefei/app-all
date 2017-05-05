@@ -1,25 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="2" passed="2">
+<testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="4735" started-at="2017-05-05T08:19:21Z" finished-at="2017-05-05T08:19:25Z">
+  <suite name="Default suite" duration-ms="4269" started-at="2017-05-05T09:10:35Z" finished-at="2017-05-05T09:10:39Z">
     <groups>
     </groups>
-    <test name="test2" duration-ms="26" started-at="2017-05-05T08:19:21Z" finished-at="2017-05-05T08:19:21Z">
-      <class name="org.test2.App2">
-        <test-method status="PASS" signature="test2()[pri:0, instance:org.test2.App2@14acaea5]" name="test2" duration-ms="11" started-at="2017-05-05T16:19:21Z" finished-at="2017-05-05T16:19:21Z">
+    <test name="Default test" duration-ms="4269" started-at="2017-05-05T09:10:35Z" finished-at="2017-05-05T09:10:39Z">
+      <class name="org.test2.TakeScreen">
+        <test-method status="PASS" signature="test()[pri:0, instance:org.test2.TakeScreen@4501b7af]" name="test" duration-ms="4256" started-at="2017-05-05T17:10:35Z" finished-at="2017-05-05T17:10:39Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- test2 -->
-      </class> <!-- org.test2.App2 -->
-    </test> <!-- test2 -->
-    <test name="sendEmail" duration-ms="4684" started-at="2017-05-05T08:19:21Z" finished-at="2017-05-05T08:19:25Z">
-      <class name="org.test2.MailTest">
-        <test-method status="PASS" signature="sendEmail()[pri:0, instance:org.test2.MailTest@73ad2d6]" name="sendEmail" duration-ms="4682" started-at="2017-05-05T16:19:21Z" finished-at="2017-05-05T16:19:25Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- sendEmail -->
-      </class> <!-- org.test2.MailTest -->
-    </test> <!-- sendEmail -->
-  </suite> <!-- Suite -->
+        </test-method> <!-- test -->
+      </class> <!-- org.test2.TakeScreen -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

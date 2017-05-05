@@ -1,4 +1,4 @@
-package org.test2;
+package com.web.utils;
 
 import java.io.File;
 import java.io.IOException;
@@ -14,25 +14,23 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 
-import com.sun.jna.platform.win32.Netapi32Util.User;
-
 public class TakeScreen {
 
 	public static void snapshot(WebDriver webdriver, String filename) {
-		Calendar calendar = Calendar.getInstance();
-		SimpleDateFormat sFormat = new SimpleDateFormat("YYYY-MM-dd");
-		String date = sFormat.format(calendar.getTime());
-		System.out.println(date);
-
+        Calendar  calendar =Calendar.getInstance();
+        SimpleDateFormat  sFormat= new SimpleDateFormat("YYYY-MM-dd");
+       String  date= sFormat.format(calendar.getTime());
+       System.out.println(date);
+        
 		String currentPath = System.getProperty("user.dir");
 
 		System.out.println(currentPath);
-		File scrFile = ((TakesScreenshot) webdriver).getScreenshotAs(OutputType.FILE); //OutputType.FILE
-		
+		File scrFile = ((TakesScreenshot) webdriver).getScreenshotAs(OutputType.FILE);
+		scrFile.getParentFile();
 
 		try {
-			System.out.println("save snapshot path is:" + currentPath + "/" + filename + date + ".jpg");
-			FileUtils.copyFile(scrFile, new File(currentPath + "\\" + filename + date + ".jpg"));
+			System.out.println("save snapshot path is:" + currentPath + "/" + filename+date+".jpg");
+			FileUtils.copyFile(scrFile, new File(currentPath + "\\" + filename+date+".jpg"));
 		} catch (IOException e) {
 
 			System.out.println("Can't save screenshot");
