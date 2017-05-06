@@ -1,17 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="4269" started-at="2017-05-05T09:10:35Z" finished-at="2017-05-05T09:10:39Z">
+  <suite name="Suite" duration-ms="28261" started-at="2017-05-06T02:41:33Z" finished-at="2017-05-06T02:42:01Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="4269" started-at="2017-05-05T09:10:35Z" finished-at="2017-05-05T09:10:39Z">
+    <test name="takeScreen" duration-ms="4435" started-at="2017-05-06T02:41:33Z" finished-at="2017-05-06T02:41:37Z">
       <class name="org.test2.TakeScreen">
-        <test-method status="PASS" signature="test()[pri:0, instance:org.test2.TakeScreen@4501b7af]" name="test" duration-ms="4256" started-at="2017-05-05T17:10:35Z" finished-at="2017-05-05T17:10:39Z">
+        <test-method status="PASS" signature="test()[pri:0, instance:org.test2.TakeScreen@68c4039c]" name="test" duration-ms="4425" started-at="2017-05-06T10:41:33Z" finished-at="2017-05-06T10:41:37Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test -->
       </class> <!-- org.test2.TakeScreen -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- takeScreen -->
+    <test name="sendEmail" duration-ms="23794" started-at="2017-05-06T02:41:37Z" finished-at="2017-05-06T02:42:01Z">
+      <class name="org.test2.MailTest">
+        <test-method status="PASS" signature="sendEmail()[pri:0, instance:org.test2.MailTest@72d818d1]" name="sendEmail" duration-ms="23792" started-at="2017-05-06T10:41:37Z" finished-at="2017-05-06T10:42:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- sendEmail -->
+      </class> <!-- org.test2.MailTest -->
+    </test> <!-- sendEmail -->
+  </suite> <!-- Suite -->
 </testng-results>

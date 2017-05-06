@@ -20,7 +20,7 @@ import org.testng.annotations.Test;
 /**
  * 发送邮件的测试程序
  * 
- * @author lwq
+ * @author yyf
  * 
  */
 public class MailTest {
@@ -28,6 +28,9 @@ public class MailTest {
     public  void sendEmail() throws MessagingException {
         // 配置发送邮件的环境属性
         final Properties props = new Properties();
+        TakeScreen tScreen=new TakeScreen();
+        String  date=tScreen.date;
+       
         /*
          * 可用的属性： mail.store.protocol / mail.transport.protocol / mail.host /
          * mail.user / mail.from
@@ -55,7 +58,7 @@ public class MailTest {
         // setContent(“邮件的正文内容”,”设置邮件内容的编码方式”)
         text.setContent("系统自动发送，无需回复！<img src='cid:a'>","text/html;charset=gb2312");
         MimeBodyPart img = new MimeBodyPart();
-        DataHandler dh = new DataHandler(new FileDataSource("D:\\github\\maven\\yyf2017-04-18.jpg"));//图片路径  
+        DataHandler dh = new DataHandler(new FileDataSource("E:\\pic" + "/" +"testReport"+date + ".jpg"));//图片路径  
         img.setDataHandler(dh); 
         img.setContentID("a");
         MimeMultipart mm = new MimeMultipart(); 

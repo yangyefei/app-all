@@ -15,28 +15,28 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 
 import com.sun.jna.platform.win32.Netapi32Util.User;
-
+/**
+ * 
+ * @author yyf
+ *
+ */
 public class TakeScreen {
-
-	public static void snapshot(WebDriver webdriver, String filename) {
-		Calendar calendar = Calendar.getInstance();
-		SimpleDateFormat sFormat = new SimpleDateFormat("YYYY-MM-dd");
-		String date = sFormat.format(calendar.getTime());
+	Calendar calendar = Calendar.getInstance();
+	SimpleDateFormat sFormat = new SimpleDateFormat("YYYY-MM-dd");
+	String date = sFormat.format(calendar.getTime());
+	
+	public void snapshot(WebDriver webdriver) throws IOException {
+	
 		System.out.println(date);
 
-		String currentPath = System.getProperty("user.dir");
-
-		System.out.println(currentPath);
+		//String currentPath = System.getProperty("user.dir");
+		
 		File scrFile = ((TakesScreenshot) webdriver).getScreenshotAs(OutputType.FILE); //OutputType.FILE
 		
 
 		try {
-			System.out.println("save snapshot path is:" + currentPath + "/" + filename + date + ".jpg");
-			FileUtils.copyFile(scrFile, new File(currentPath + "\\" + filename + date + ".jpg"));
-		} catch (IOException e) {
-
-			System.out.println("Can't save screenshot");
-			e.printStackTrace();
+			System.out.println("save snapshot path is:" + "E:\\pic" + "/" + "testReport" + date + ".jpg");
+			FileUtils.copyFile(scrFile, new File("E:\\pic" + "/" + "testReport" + date + ".jpg"));
 		} finally {
 
 			System.out.println("screen shot finished");
@@ -45,10 +45,10 @@ public class TakeScreen {
 	}
 
 	@Test
-	public void test() {
+	public void test() throws IOException {
 		System.setProperty("webdriver.chrome.driver", "D:\\autoWeb\\browserDriver\\chromedriver.exe");
 		WebDriver webDriver = new ChromeDriver();
-		webDriver.get("file:///D:/github/maven/test-output/html/apple.html");
-		snapshot(webDriver, "yyf");
+		webDriver.get("file:///D:\\workspacenew\\app-all\\test1\\test-output\\html\\index.html");
+		snapshot(webDriver);
 	}
 }
